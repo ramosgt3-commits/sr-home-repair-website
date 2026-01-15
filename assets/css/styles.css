@@ -1,0 +1,104 @@
+:root{
+  --bg:#0b0f17;
+  --card:#121a2a;
+  --text:#eaf0ff;
+  --muted:#b8c2dd;
+  --line:rgba(234,240,255,.12);
+  --accent:#4da3ff;
+  --accent2:#66ffc9;
+  --shadow: 0 18px 40px rgba(0,0,0,.35);
+  --radius: 16px;
+  --max: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--max);margin:auto;padding:0 18px}
+.section{padding:56px 0}
+
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 18px;
+  border-bottom:1px solid var(--line);
+}
+
+.brand{
+  display:flex;
+  gap:10px;
+  font-weight:800;
+}
+
+.brand-mark{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#000;
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.site-nav{display:flex;gap:14px}
+.nav-link{color:var(--muted)}
+.nav-link:hover{color:var(--text)}
+
+.btn{
+  padding:10px 14px;
+  border-radius:12px;
+  font-weight:700;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#000;
+}
+
+.hero{padding:64px 0}
+.hero h1{font-size:2.4rem;margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px;
+  margin-top:18px;
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.form{display:grid;gap:12px}
+input,textarea{
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:#0f1625;
+  color:var(--text);
+}
+
+.site-footer{
+  border-top:1px solid var(--line);
+  padding:24px 18px;
+  margin-top:48px;
+  color:var(--muted);
+}
+
+@media(max-width:800px){
+  .grid-3{grid-template-columns:1fr}
+  .site-nav{display:none}
+}
